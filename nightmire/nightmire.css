@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'NightMireFont';
+    src: url('https://desimoneanimations.com/fonts/main.ttf') format('truetype');
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'NightMireFont', "Courier New", Courier, monospace;
+    margin: 0;
+    text-align: center;
+}
+
+section#nightmireheader {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 10px;
+}
+
+section#nightmireheader a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 20px;
+    letter-spacing: 1px;
+}
+
+section#nightmireheader a:hover {
+    color: #ffffff;
+}
+
+section#nightmire {
+    margin-bottom: 50px;
+}
+
+section#nightmire h1 {
+    font-size: 4rem;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+section#nightmire h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+section#nightmire h2:last-of-type {
+    color: #ffff00;
+}
+
+section#nightmireinfo {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+section#nightmireinfo p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+section#nightmireinfo p:first-of-type {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    display: list-item;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+ul::before {
+    content: "* ";
+    color: #ffffff;
+}
+
+section#nmfooter {
+    margin-top: 80px;
+}
+
+p#tinytxt {
+    font-size: 0.8rem;
+    color: #666666;
+}
