@@ -1,0 +1,15 @@
+.alignm {
+    text-align: center;
+}
+
+.st {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-family: src(url(fonts/main.ttf));
+}
+
+.t {
+    font-size: 100px;
+    color: rgb(255, 0, 0);
+    font-family: src(url(fonts/main.ttf));
+}
