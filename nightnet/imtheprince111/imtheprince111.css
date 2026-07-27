@@ -1,0 +1,84 @@
+body {
+    background-color: #000000;
+    color: #33FF00;
+    font-family: "Courier New", Courier, monospace;
+    margin: 20px;
+    padding: 10px;
+    border: 5px double #33FF00;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1#profileun {
+    font-family: "Comic Sans MS", "Times New Roman", serif;
+    color: #FF00FF;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #FFFFFF;
+}
+
+h2, h3 {
+    color: #00FFFF;
+    border-bottom: 1px dashed #00FFFF;
+    padding-bottom: 5px;
+}
+
+p#profiledesc {
+    font-style: italic;
+    background-color: #222222;
+    padding: 10px;
+    border: 1px solid #33FF00;
+    text-align: center;
+}
+
+label#lastonline {
+    display: block;
+    color: #FF0000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+section#posts {
+    background-color: #111111;
+    border: 2px solid #FF00FF;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+li#posts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#post {
+    list-style-type: square;
+    color: #FFFFFF;
+    background-color: #333333;
+    margin: 10px 0;
+    padding: 10px 10px 10px 30px;
+    border-left: 5px solid #00FFFF;
+}
+
+a {
+    color: #FFFF00;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #FF0000;
+    background-color: #FFFF00;
+    text-decoration: none;
+    cursor: crosshair;
+}
+
+h2#recposts::before {
+    content: ">> ";
+}
+h2#recposts::after {
+    content: " <<";
+}
