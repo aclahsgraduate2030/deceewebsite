@@ -1,15 +1,135 @@
+@font-face {
+    font-family: 'NightMireFont';
+    src: url('fonts/main.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
 .alignm {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.st {
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-    font-family: src(url(fonts/main.ttf));
+h1.st {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: -10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.t {
-    font-size: 100px;
-    color: rgb(255, 0, 0);
-    font-family: src(url(fonts/main.ttf));
+h1.t {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #222222;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    margin-top: 40px;
+}
+
+.box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+    margin-top: 0;
+    color: #333333;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.box p {
+    color: #666666;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.nightmireadvert {
+    background-color: #0b0b0e;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 70px 40px;
+    margin-top: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.nightmireadvert h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #aaaaaa;
+    margin-bottom: 0;
+}
+
+.nightmiret {
+    font-family: 'NightMireFont', monospace;
+    font-size: 5rem;
+    color: #fff000;
+    margin: 10px 0 20px 0;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+.nightmireadvert p {
+    font-family: 'NightMireFont', monospace;
+    font-size: 1.15rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.button {
+    font-family: 'NightMireFont', monospace;
+    display: inline-block;
+    margin-top: 35px;
+    padding: 18px 40px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff4a79;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 42, 95, 0.3);
 }
