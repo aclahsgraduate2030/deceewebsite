@@ -106,6 +106,14 @@ h1 {
     text-transform: uppercase;
 }
 
+.nightmiret {
+    font-family: 'NightMireFont', monospace;
+    font-size: 5rem;
+    color: #ffff00;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
 .nightmireadvert p {
     font-family: 'NightMireFont', monospace;
     font-size: 1.15rem;
@@ -125,11 +133,8 @@ h1 {
     font-weight: 800;
     letter-spacing: 1px;
     border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
-    background-color: #ff4a79;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 42, 95, 0.3);
+    background-color: #ffffff;
 }
