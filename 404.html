@@ -8,5 +8,35 @@
 </head>
 <body>
     
+    <img id="plr-image" src="assets/images/player/spr_player_sleep.png" alt="innocent boys sleep peacefully">
+
+    <audio id="bg-audio" src="assets/audio/ar.ogg" loop></audio>
+    <audio id="toggle-audio" src="assets/audio/toggle.ogg"></audio>
+
+    <script>
+        const audio = document.getElementById('bg-audio');
+        const toggle = document.getElementById('toggle-audio');
+        const plrImage = document.getElementById('plr-image');
+        
+        let isPlaying = false;
+
+        const imgnomus = "assets/images/player/spr_player_sleep.png";
+        const imgmus = "assets/images/player/spr_player_sleep_ring.png"; 
+
+        document.body.addEventListener('click', () => {
+            toggle.currentTime = 0; 
+            toggle.play();
+
+            if (isPlaying) {
+                audio.pause();
+                plrImage.src = imgnomus;
+                isPlaying = false;
+            } else {
+                audio.play();
+                plrImage.src = imgmus;
+                isPlaying = true;
+            }
+        });
+    </script>
 </body>
 </html>
