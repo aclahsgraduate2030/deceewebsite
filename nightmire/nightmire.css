@@ -15,10 +15,13 @@ section#nightmireheader {
     text-align: center;
     margin-bottom: 50px;
     padding-top: 10px;
+    background-color: #8fabff;
+    border-bottom: #7497ff 5px solid;
 }
 
 section#nightmireheader a {
-    color: #888888;
+    color: #ffffff;
+    text-shadow: #000000 1px 1px 2px;
     text-decoration: none;
     font-size: 1rem;
     margin: 0 20px;
@@ -90,4 +93,12 @@ section#nmfooter {
 p#tinytxt {
     font-size: 0.8rem;
     color: #666666;
+}
+
+#screenshot {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
 }
