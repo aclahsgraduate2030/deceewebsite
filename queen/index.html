@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- THERE ARE NO SECRETS HERE. -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<!-- ARE YOU SERIOUSLY TRYING TO LOOK IN THE CODE? -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIGHTMIRE</title>
+    <style>
+        @font-face {
+            font-family: 'NightMireFontW';
+            src: url('https://desimoneanimations.com/fonts/what.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'NightMireFont';
+            src: url('https://desimoneanimations.com/fonts/main.otf') format('opentype');
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="canvasss" width="640" height="480"></canvas>
+
+    <script>
+        (function() {
+            const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'A', 'S', 'D', 'F', 'G', 'H', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '1', '2', '3', '4', '5'];
+
+            function changetitle() {
+                let letitol = "";
+                for (let i = 0; i < 45; i++) {
+                    const breh = Math.floor(Math.random() * keys.length);
+                    letitol += keys[breh];
+                }
+                document.title = letitol;
+            }
+            setInterval(changetitle, 250);
+        })();
+
+        const canvas = document.getElementById("canvasss");
+        const ctx = canvas.getContext("2d");
+
+        const CONFIG = {
+            font: "24px 'NightmireFontW', monospace",
+            linh: 32,
+            padx: 40,
+            pady: 260,
+            defaultColor: "#ffffff",
+            textSpeed: 5
+        };
+
+        const bgAudio = new Audio('mus_queenweirdsite.mp3'); 
+        const txtaudio = new Audio('efg.wav'); 
+        
+        let msg = [
+            "[shake = 1]Fvb dvbsku'a dhua av lewvzl zljylaz,[delay=30] dvbsk fvb?[/shake]",
+            "[shake = 2][color=#ff4444]Pm fvb zvtlovd nva aopz tlzzhnl, aol rpun pz nvpun av kpl, huk zv pz aol ylza vm aol ltwpyl.[/color][/shake]",
+            "[shake = 3]Aol xbllu hsylhkf kplk,[delay=30] huk pa pz hss fvby mhbsa.[/shake]",
+            "[shake = 4]FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.FVB DPSS IL WBUPZOLK.[delay=30][/shake]",
+        ];
+        
+        let lemessage = [];
+        let charnum = 0;
+        let framesrn = 0;
+        let delaycounter = 0;
+        
+        let tb_state = {
+            commenced: false,
+            finished: false,
+            connection_terminated: false
+        };
+
+        const keys = { Enter: false };
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" && tb_state.commenced) {
+                keys.Enter = true;
+                e.preventDefault();
+            }
+        });
+
+        window.addEventListener("click", () => {
+            if (!tb_state.commenced) {
+                tb_state.commenced = true;
+                bgAudio.play().catch(err => console.log("Audio playback failed:", err));
+                txtaudio.play().catch(err => console.log("Audio playback failed:", err));
+            }
+        });
+
+        function obfuscaterbecauseyes(inputString) {
+            const chars = [];
+            let curr_color = CONFIG.defaultColor;
+            let curr_shake = 0;
+            let curr_delay = 0;
+            
+            let i = 0;
+            while (i < inputString.length) {
+                if (inputString[i] === "[") {
+                    let attriend = inputString.indexOf("]", i);
+                    if (attriend !== -1) {
+                        let inattri = inputString.substring(i + 1, attriend);
+                        
+                        if (inattri.startsWith("color=")) {
+                            curr_color = inattri.split("=")[1];
+                        } else if (inattri.startsWith("shake=")) {
+                            curr_shake = parseInt(inattri.split("=")[1]) || 0;
+                        } else if (inattri.startsWith("delay=")) {
+                            curr_delay = parseInt(inattri.split("=")[1]) || 0;
+                        } else if (inattri === "/color") {
+                            curr_color = CONFIG.defaultColor;
+                        } else if (inattri === "/shake") {
+                            curr_shake = 0;
+                        }
+                        
+                        i = attriend + 1;
+                        
+                        if (curr_delay > 0 && chars.length > 0) {
+                            chars[chars.length - 1].pauseTicks = curr_delay;
+                            curr_delay = 0;
+                        }
+                        continue;
+                    }
+                }
+                
+                chars.push({
+                    char: inputString[i],
+                    color: curr_color,
+                    shake: curr_shake,
+                    pauseTicks: 0
+                });
+                i++;
+            }
+            return chars;
+        }
+
+        function step() {
+            if (!tb_state.commenced) return;
+            if (tb_state.connection_terminated) return;
+
+            if (delaycounter > 0) {
+                delaycounter--;
+                keys.Enter = false; 
+                return;
+            }
+
+            if (!tb_state.finished) {
+                framesrn++;
+                if (framesrn >= CONFIG.textSpeed) {
+                    framesrn = 0;
+                    
+                    if (charnum < lemessage.length) {
+                        if (lemessage[charnum].pauseTicks > 0) {
+                            delaycounter = lemessage[charnum].pauseTicks;
+                        }
+                        charnum++;
+                        txtaudio.currentTime = 0;
+                        txtaudio.play().catch(err => console.log("Audio playback failed:", err));
+                    } else {
+                        tb_state.finished = true;
+                    }
+                }
+
+                if (keys.Enter) {
+                    //charnum = lemessage.length;
+                    //tb_state.finished = true;
+                    keys.Enter = false;
+                }
+            } 
+            else if (keys.Enter) {
+                msg.shift(); 
+                
+                if (msg.length > 0) {
+                    nextup();
+                } else {
+                    tb_state.connection_terminated = true;
+                }
+            }
+
+            keys.Enter = false;
+        }
+
+        function draw() {
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            if (!tb_state.commenced) {
+                ctx.font = "32px 'NightmireFont', monospace";
+                ctx.fillStyle = "#ffffff";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText("NIGHTMIRE (hmtl port)", canvas.width / 2, canvas.height / 2 - 20);
+                
+                ctx.font = "16px monospace";
+                ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(Math.sin(Date.now() / 500))})`; 
+                ctx.fillText("CLICK SCREEN TO START", canvas.width / 2, canvas.height / 2 + 20);
+                return;
+            }
+
+            if (tb_state.connection_terminated) {
+                ctx.font = CONFIG.font;
+                ctx.fillStyle = "#ffff44";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText("Oops! Seems there is an error at: 'desimoneanimations.com/?????'.", canvas.width / 2, canvas.height / 2 - 15);
+                ctx.fillText("You will be redirected to the homepage shortly.", canvas.width / 2, canvas.height / 2 + 15);
+                
+                if (!window.hasRedirected) {
+                    window.hasRedirected = true;
+                    setTimeout(() => {
+                        window.location.href = "https://desimoneanimations.com";
+                    }, 3000); 
+                }
+                return;
+            }
+
+            ctx.font = CONFIG.font;
+            ctx.textAlign = "left";
+            ctx.textBaseline = "top";
+
+            let thex = CONFIG.padx;
+            let they = CONFIG.pady;
+            const maxWidth = canvas.width - CONFIG.padx;
+
+            for (let idx = 0; idx < charnum; idx++) {
+                const chara = lemessage[idx];
+                const charaw = ctx.measureText(chara.char).width;
+
+                if (thex + charaw > maxWidth) {
+                    thex = CONFIG.padx;
+                    they += CONFIG.linh;
+                }
+
+                let renx = thex;
+                let renxy = they;
+
+                if (chara.shake > 0) {
+                    renx += (Math.random() * chara.shake * 2) - chara.shake;
+                    renxy += (Math.random() * chara.shake * 2) - chara.shake;
+                }
+
+                ctx.fillStyle = chara.color;
+                ctx.fillText(chara.char, renx, renxy);
+                thex += charaw;
+            }
+        }
+
+        function nextup() {
+            lemessage = obfuscaterbecauseyes(msg[0]);
+            charnum = 0;
+            tb_state.finished = false;
+        }
+
+        nextup();
+        setInterval(() => {
+            step();
+            draw();
+        }, 1000 / 60);
+    </script>
+</body>
+</html>
